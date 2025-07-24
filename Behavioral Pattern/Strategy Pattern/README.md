@@ -28,9 +28,9 @@
 
 | Example | Description | Link |
 |--------|-------------|------|
-| 🛒 **Payment System** | Select between CreditCard, PayPal, UPI payments | [View Code](./payment-system) |
-| 🧭 **Navigation App** | Switch between Bike, Car, Walk strategies | [View Code](./navigation-app) |
-| 🔃 **Sorting Application** | Apply Bubble Sort, Quick Sort, etc dynamically | [View Code](./sorting-application) |
+| 🛒 **Payment System** | Select between CreditCard, PayPal, UPI payments | [View Code](./payment-system/Client.java) |
+| 🧭 **Navigation App** | Switch between Bike, Car, Walk strategies | [View Code](./navigation-app/Client.java) |
+| 🔃 **Sorting Application** | Apply Bubble Sort, Quick Sort, etc dynamically | [View Code](./sorting-application/Client.java) |
 
 ---
 
