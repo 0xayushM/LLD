@@ -72,4 +72,5 @@ Supports strategies like Bubble Sort, Merge Sort, and Quick Sort, allowing users
 **Goal**: Choose and apply sorting dynamically at runtime.
 
 **UML Diagram**:
+
 ![Sorting Application](./diagrams/sorting-app.drawio.png)
