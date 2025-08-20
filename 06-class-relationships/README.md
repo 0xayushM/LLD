@@ -445,3 +445,100 @@ Paid using Cash
 
 ![alt_text](../Diagrams/06/realization.drawio.png)
 
+## 🔹 3. Library Management System 
+
+### 1. Problem Statement
+Design and implement a minimal **Library Management System** using Java to demonstrate **all class relationships**.
+
+---
+
+### 2. Functional Requirements
+- Add **Authors** and **Books**.
+- A **Book** has a **title** and an **Author**.
+- Add **Ebooks** (a kind of Book) that also store a **fileFormat**.
+- A **Library** groups many **Books** and can list them.
+- A **Reader** can **read a Book**.
+- A **ReadingClub** can add **Readers** and show members.
+
+---
+
+### 3. Non-functional / Design Requirements
+- Demonstrate:
+  - **Inheritance** → `Ebook extends Book`
+  - **Realization** → `Book implements Readable`
+  - **Association** → `Book → Author`
+  - **Aggregation** → `Library ◇– Book`, `ReadingClub ◇– Reader`
+  - **Dependency** → `Reader.readBook(Book)`
+- Use proper **packages** (author, book, ebook, library, reader, readable, readingclub, app).
+- Keep fields private; prefer `final` where possible.
+
+---
+
+### 4. Class Diagram
+![LMS Class Diagram](../Diagrams/06/lms.png)
+
+---
+
+### 5. Folder Structure
+```
+LMS/
+author/Author.java
+book/Book.java
+ebook/Ebook.java
+library/Library.java
+reader/Reader.java
+readable/Readable.java
+readingclub/ReadingClub.java
+app/Main.java
+```
+
+---
+### 6. Code Files
+- [Author.java](./LMS/author/Author.java)  
+- [Book.java](./LMS/book/Book.java)  
+- [Ebook.java](./LMS/ebook/Ebook.java)  
+- [Library.java](./LMS/library/Library.java)  
+- [Reader.java](./LMS/reader/Reader.java)  
+- [Readable.java](./LMS/readable/Readable.java)  
+- [ReadingClub.java](./LMS/readingclub/ReadingClub.java)  
+- [Main.java](./LMS/app/Main.java)  
+
+---
+### 7. Output
+
+```
+Ayush starts reading:
+Book name is 1984 written by George Orwell
+John starts reading:
+Book name is Clean Code written by Robert C. Martin
+John starts reading:
+File format: PDF
+
+--- Library Catalogue ---
+Book name is 1984 written by George Orwell
+Book name is Clean Code written by Robert C. Martin
+File format: PDF
+
+--- Reading Club Members ---
+Ayush
+John
+```
+
+---
+
+## 🔹 4. Conclusion  
+
+In this module, we explored the **six fundamental class relationships** — Inheritance, Association, Aggregation, Composition, Dependency, and Realization.  
+Each relationship was broken down into:  
+- **Definition & Use Cases** → when and why to apply it.  
+- **Code Examples & Diagrams** → to visualize the concept.  
+- **Pitfalls** → to avoid common design mistakes.  
+
+Finally, we brought them all together in a **Library Management System (LMS)**, showing how these relationships interact in a real-world style design.  
+
+Mastering these relationships is essential because:  
+- They are the **building blocks of Object-Oriented Design (OOD)**.  
+- They directly influence how scalable, maintainable, and testable your system becomes.  
+- They are the **language of UML & System Design interviews** — being able to model problems using these relationships sets you apart.  
+
+> 🏆 The key takeaway: **Good design is not about using every relationship everywhere, but about choosing the *right* one for the problem at hand.**
