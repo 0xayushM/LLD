@@ -312,7 +312,11 @@ House contains Living Room and a Kitchen
 **Definition:** Dependency represent a temporary relationship where one class uses another class, typically via method paramters or local variables.
 > It's like borrowing a tool for a short while.
 
-**When to use:**
+**When to use:**  
+- When one class needs another only **temporarily** to complete a task.  
+- When passing collaborators as **method parameters** is cleaner than storing them as fields.  
+- When you want to reduce **coupling** by not permanently linking two classes.  
+- Common in **utility usage** (e.g., Logger, Printer, Validator, Database connection helper).  
 
 **Example:**
 
@@ -320,7 +324,7 @@ Code:
 
 ```java
 class Printer {
-    void Print(String message) {
+    void print(String message) {
         System.out.println(message);
     }
 }
@@ -339,7 +343,9 @@ class Document {
 
 class DependencyExample {
     public static void main(String[] args) {
-        Document document = new 
+        Document doc = new Document("Hello, World!");
+        Printer printer = new Printer();
+        doc.printDoc(printer);
     }
 }
 ```
@@ -347,29 +353,95 @@ class DependencyExample {
 Output:
 
 ```
+Hello, World!
 ```
+
+**Explanation:**  
+- `Document` does **not own** a `Printer` object. Instead, it **borrows** one when needed (through the `printDoc()` method).  
+- This makes the relationship **temporary** — the `Printer` is passed as a method parameter, and `Document` does not store it as a field.  
+- Once the method call is done, the dependency ends.  
+
+**Why this is Dependency (and not Association):**  
+- In **Association**, one class stores a long-lived reference to another (e.g., `Person` has a `Car`).  
+- In **Dependency**, the relationship exists only during a method call (short-lived).  
+- If the collaborator is replaced or absent, the dependent class can still exist, it just won’t perform that action.  
+
+**Pitfalls:**  
+- Too many dependencies can make methods **bloated** (large parameter lists).  
+- If dependencies become **long-lived**, refactor into **Association** or **Dependency Injection**.  
+- Overusing dependencies without interfaces makes testing harder — prefer depending on **abstractions** instead of concrete classes.
+
 
 **Class Diagram:**
 
-![alt_text]()
+![alt_text](../Diagrams/06/dependency.drawio.png)
 
 ## ➤ Realization
-**Definition:** 
+**Definition:** Realization represents a relationship where a class implements on interface.
+> It's like signing a contract to provide specific behaviours.
 
-**When to use:**
+**When to use:**  
+- When you want to define a **contract (interface)** that multiple classes can implement differently.  
+- When different classes should provide their own **implementation of the same behavior**.  
+- To achieve **loose coupling** and follow the **Dependency Inversion Principle (DIP)**.  
+- Common in strategy-based designs (e.g., different payment methods, authentication mechanisms, storage providers).  
 
 **Example:**
 
 Code:
 
 ```java
+interface Payment {
+    void pay();
+}
+
+class CreditCard implements Payment {
+    @Override
+    public void pay() {
+        System.out.println("Paid using Credit Card");
+    }
+}
+
+class Cash implements Payment {
+    @Override
+    public void pay() {
+        System.out.println("Paid using Cash");
+    }
+}
+
+public class RealizationExample {
+    public static void main(String[] args) {
+        Payment payment1 = new CreditCard();
+        Payment payment2 = new Cash();
+        payment1.pay();
+        payment2.pay();
+    }
+}
 ```
 
 Output:
 
 ```
+Paid using Credit Card
+Paid using Cash
 ```
+
+**Explanation:**  
+- `Payment` is an **interface** (a contract) that defines a method `pay()`.  
+- `CreditCard` and `Cash` **realize** this interface by providing their own implementation of `pay()`.  
+- In `main`, both objects are referenced through the **Payment interface**, which allows polymorphism — the correct implementation is chosen at runtime.  
+- This enables flexibility: you can add new payment methods without changing existing code, only by introducing new classes that **implement Payment**.  
+
+**Why this is Realization (and not Inheritance):**  
+- Inheritance shares behavior and state from a **base class**.  
+- Realization only promises to **implement defined behaviors** of an interface (no shared code, just a contract).  
+
+**Pitfalls:**  
+- Overusing interfaces can lead to **unnecessary abstraction** (“interface pollution”).  
+- Avoid creating interfaces with only one implementation — keep them meaningful.  
+- If too many methods are forced into one interface, it may violate the **Interface Segregation Principle (ISP)**.  
 
 **Class Diagram:**
 
-![alt_text]()
+![alt_text](../Diagrams/06/realization.drawio.png)
+
