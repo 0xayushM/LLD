@@ -1,4 +1,4 @@
-# 📘 Module 06: Class Relationships – A Deep Dive
+# 📘 Module 02: Class Relationships – A Deep Dive
 
 ## 🔹 1. Overview
 Class relationships define how classes in an object-oriented system interact.  
@@ -82,7 +82,7 @@ Animal is eating
 
 **Class Diagram:** 
 
-![alt text](../Diagrams/06/inheritance.drawio.png)
+![alt text](../Diagrams/02/inheritance.drawio.png)
 
 ## ➤ Association
 
@@ -155,7 +155,7 @@ Driving a Tata Safari
 
 **Class Diagram:**
 
-![alt_text](../Diagrams/06/association.drawio.png)
+![alt_text](../Diagrams/02/association.drawio.png)
 
 ## ➤ Aggregation
 
@@ -236,7 +236,7 @@ Tony Stark
 
 **Class Diagram:**
 
-![alt_text](../Diagrams/06/aggregation.drawio.png)
+![alt_text](../Diagrams/02/aggregation.drawio.png)
 
 ## ➤ Composition
 
@@ -305,7 +305,7 @@ House contains Living Room and a Kitchen
 
 **Class Diagram:**
 
-![alt_text](../Diagrams/06/composition.drawio.png)
+![alt_text](../Diagrams/02/composition.drawio.png)
 
 ## ➤ Dependency
 
@@ -374,7 +374,7 @@ Hello, World!
 
 **Class Diagram:**
 
-![alt_text](../Diagrams/06/dependency.drawio.png)
+![alt_text](../Diagrams/02/dependency.drawio.png)
 
 ## ➤ Realization
 **Definition:** Realization represents a relationship where a class implements on interface.
@@ -443,7 +443,7 @@ Paid using Cash
 
 **Class Diagram:**
 
-![alt_text](../Diagrams/06/realization.drawio.png)
+![alt_text](../Diagrams/02/realization.drawio.png)
 
 ## 🔹 3. Library Management System 
 
@@ -475,7 +475,7 @@ Design and implement a minimal **Library Management System** using Java to demon
 ---
 
 ### 4. Class Diagram
-![LMS Class Diagram](../Diagrams/06/lms.png)
+![LMS Class Diagram](../Diagrams/02/lms.png)
 
 ---
 

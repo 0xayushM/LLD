@@ -6,7 +6,7 @@ This repository is a **comprehensive guide to mastering Low-Level Design (LLD)**
 It contains:  
 - ✅ **Easy-to-understand theory** of every LLD concept and design pattern  
 - ✅ **Clean Java implementations** (with interfaces, invariants, unit tests)  
-- ✅ **UML diagrams** (Mermaid/PlantUML) to visualize class relationships  
+- ✅ **UML diagrams** to visualize class relationships  
 - ✅ **Interview-focused insights** (what to say, what not to say)  
 - ✅ **Coding exercises & challenges** for practice  
 - ✅ **Best practices**: SOLID, immutability, concurrency, error handling  
@@ -20,19 +20,7 @@ Each module is self-contained with **README + Code + Diagrams + Exercises**, mak
 1. [Introduction to Classes & Objects](./01-introduction-to-classes-objects/README.md)  
    Basics of OOP, class vs object, identity vs state, real-world modeling.  
 
-2. [Interfaces & Abstraction](./02-interfaces-and-abstraction/README.md)  
-   Hiding implementation, defining contracts, Java interfaces & abstract classes.  
-
-3. [Encapsulation & Access Modifiers](./03-encapsulation-access-modifiers/README.md)  
-   Data hiding, controlled access, immutability, and API design.  
-
-4. [Inheritance & Polymorphism](./04-inheritance-polymorphism/README.md)  
-   “Is-a” vs “Has-a”, method overriding, runtime vs compile-time polymorphism.  
-
-5. [SOLID Principles](./05-solid-principles/README.md)  
-   Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion.  
-
-6. [Class Relationships – Deep Dive](./06-class-relationships/README.md)  
+2. [Class Relationships – Deep Dive](./02-class-relationships/README.md)  
    Association, Dependency, Aggregation, Composition, Multiplicity, Navigability, with Java & UML.  
 
 ---
