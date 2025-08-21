@@ -1,4 +1,4 @@
-# 📘 Low-Level Design (LLD) in Java – Complete Repository
+# 📘 Low-Level Design (LLD) in Java
 
 ## 🔹 Overview
 This repository is a **comprehensive guide to mastering Low-Level Design (LLD)** for software engineering interviews and real-world system building.  
